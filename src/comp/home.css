@@ -3,6 +3,8 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
 }
 .list{
     display: flex;
@@ -53,4 +55,6 @@ h4{
     align-items: center;
     justify-content: space-between;
     background-color: brown;
+    padding: 10px;
+    border-radius: 10px;
 }
