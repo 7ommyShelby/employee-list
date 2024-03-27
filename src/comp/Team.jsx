@@ -23,7 +23,7 @@ const Team = () => {
                                 <p>Age : {e.age}</p>
                                 <button onClick={() => {
                                     state.table.splice(idx, 1)
-                                    dispatch({ type: 'remove', payload: state.table })
+                                    dispatch({ type: 'remove', payload: e.id })
                                 }}>Remove</button>
                             </div>
                         </>

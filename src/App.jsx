@@ -27,15 +27,22 @@ const reducer = (state, action) => {
 
       let x = state.original[action.payload - 1]
       x.condition = true;
-
+    
       return {
-        original : [...state.original, x],
+        original: [...state.original],
         table: [...state.table, x], // element
+        // ...state,
+        // table: [...state.table, action.payload]
+
       }
     case 'remove':
+       state.original[action.payload - 1].condition =false
+
       return {
-        ...state,
-        table: action.payload, // array
+        original: [...state.original],
+        table: [...state.table]
+        // ...state,
+        // table: action.payload, // array
       }
 
     case 'disable':
