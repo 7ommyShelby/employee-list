@@ -4,7 +4,6 @@ import { useContext } from 'react'
 
 
 
-
 const Team = () => {
     let age = 0;
 
@@ -14,8 +13,10 @@ const Team = () => {
         <div className='right'>
             <h1>Team</h1>
             <div className="team">
+                <button onClick={() => {
+                    dispatch({ type: 'sort' })
+                }}>Sort by Age</button>
                 {state.table.map((e, idx) => {
-
                     return (
                         <>
                             <div className="tab">

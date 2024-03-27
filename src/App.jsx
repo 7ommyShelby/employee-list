@@ -27,7 +27,7 @@ const reducer = (state, action) => {
 
       let x = state.original[action.payload - 1]
       x.condition = true;
-    
+
       return {
         original: [...state.original],
         table: [...state.table, x], // element
@@ -36,7 +36,7 @@ const reducer = (state, action) => {
 
       }
     case 'remove':
-       state.original[action.payload - 1].condition =false
+      state.original[action.payload - 1].condition = false
 
       return {
         original: [...state.original],
@@ -45,9 +45,11 @@ const reducer = (state, action) => {
         // table: action.payload, // array
       }
 
-    case 'disable':
+    case 'sort':
+      state.table.sort(function (a, b) { return a.age - b.age })
       return {
-
+        ...state,
+        table: [...state.table]
       }
     default:
       return state;
